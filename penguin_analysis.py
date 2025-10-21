@@ -15,3 +15,10 @@ plt.tight_layout()
 plt.savefig("penguin_species_plot.png")
 
 print("Analysis Complete! FIles saved in this folder")
+
+#Add Scatterplot of bill length vs body mass
+df.plot.scatter(x='bill_length_mm', y='body_mass_g', title='Bill Length vs Body Mass')
+plt.tight_layout()
+plt.savefig("penguin_scatterplot.png")
+
+print("Added Scatterplot to analysis")
