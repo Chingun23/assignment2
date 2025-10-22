@@ -22,3 +22,12 @@ plt.tight_layout()
 plt.savefig("penguin_scatterplot.png")
 
 print("Added Scatterplot to analysis")
+
+# Adding an ols regression (ethan)
+import statsmodels.api as sm
+from statsmodels.formula.api import ols
+
+ols_model = ols('body_mass_g ~ C(species) * C(year) + island', 
+                data=df).fit()
+print(ols_model.summary2())
+
